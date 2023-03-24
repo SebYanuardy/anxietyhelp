@@ -1,0 +1,3 @@
+First find photos for all of the pages 
+Resize the photo in the landing page and make sure that the photo fixs in the hero class 
+then do your research about the diffrent catagories of the pages and then make sure to put them into the pages 

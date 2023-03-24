@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after{
+    /*This piece of code sets the mrgin and paddinf of all elements on a webpage to 0 and sets
+    the box-sizing property of all elements to "border-box" */
+    /* The asterisk (*) is a universal selector that matches any element on the webpage. The "::before" and "::after" pseudo-elements are used to style the content before and after an element, respectively.
+    Setting the margin and padding of all elements to 0 removes any default margin and padding that may be applied by the browser, ensuring that the layout of the page is consistent across different browsers.*/
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@font-face {
+    /*You can name the font family anything you want and then src url just is you
+    linking where the file is located */
+    font-family: PopLight;
+    src: url('../fonts/Poppins-Light.ttf');
+}
+@font-face {
+    /*You can name the font family anything you want and then src url just is you
+    linking where the file is located */
+    font-family: PopRegular;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+body{
+    font-family: PopLight;
+}
+.portfolio{
+    background: rgb(194,174,238);
+    background:radial-gradient(circle, rgba(194,174,238,1) 0% , rgba(148,187,233,1) 100%);
+}
+
+nav{
+    /* Come back and fix the logo padding ONLY AFTER you fix up the logo size */
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+
+}
+
+.logo{
+    font-size: 30px;
+}
+
+.page{
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+.hero{
+    overflow:hidden;
+    height: 500px;
+    align-self: center;
+    justify-self:center;
+}
