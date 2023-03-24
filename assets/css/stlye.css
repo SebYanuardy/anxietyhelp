@@ -51,8 +51,71 @@ nav{
     grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
 .hero{
-    overflow:hidden;
+    overflow: hidden;
     height: 500px;
     align-self: center;
-    justify-self:center;
+    justify-self:center; 
+    display:flex;
+}
+.hero img{
+    height: 500px;
+
+}
+/* not working this should bring the detail down to the bottom but it isnt and also should 
+center the picture but it isnt so check this out*/
+/* Maybe try retyping this it might work out */
+.details {
+    grid-column: 2/3;
+    align-self: end;
+}
+.details h1{
+    font-size: 50px;
+    font-family: PopRegular;
+}
+.details h2 {
+    font-size: 30px;
+    font-family: PopRegular;
+    /*setting the padding above i think */
+    padding: 20px 0px;
+}
+.details p {
+    font-size:12px;
+    font-family: PopRegular;
+    padding: 20px 0px 50px 0px;
+
+}
+.pages{
+    position:absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.pages > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pafes h3{
+    font-size: 24px;
+    padding: 20px;
+}
+.pages svg{
+    /* this allows for the cursor to click something */
+    cursor:pointer;
+    opacity: 0.5;
+    transform: scale(2);
+}
+.pages svg:hover{
+    animation: dot 0.5s ease-in-out infinite alternate;
+}
+.pages svg.active{
+    opacity: 1;
+}
+@keyframes dot{
+    0% {
+        transform: scale(2);
+    }
+    100%{
+        transform:scale(3);
+    }
 }
