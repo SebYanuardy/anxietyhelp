@@ -1,0 +1,130 @@
+@font-face {
+    /*You can name the font family anything you want and then src url just is you
+    linking where the file is located */
+    font-family: PopLight;
+    src: url('../fonts/Poppins-Light.ttf');
+}
+@font-face {
+    /*You can name the font family anything you want and then src url just is you
+    linking where the file is located */
+    font-family: PopRegular;
+    src: url('../fonts/Poppins-Regular.ttf');
+
+}
+
+/* I need to seperate each card and then find a way for them to be horiziontal from each other and then figure out how to fit the tezt inisidw of the card */
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #EDEFFE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: PopLight;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card1, .card2, .card3 {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    margin-right: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.card1 .card-front {
+    background: #ccbeeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card2 .card-front{
+    background: #add8ed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card3 .card-front{
+    background: #e09BA5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back {
+    background: #FFC0CB;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-content, .back-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-content img, .back-content img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.front-content h3, .back-content h3 {
+    font-size: 20px;
+    font-family: PopRegular;
+    color: #fff;
+    margin: 0;
+}
+
+.back-content p {
+    font-size: 18px;
+    font-family: PopLight;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+.back-content a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: PopLight;
+    color: #fff;
+    padding: 10px 20px;
+    background: #333;
+    border-radius: 5px;
+    text-decoration: none;
+}
