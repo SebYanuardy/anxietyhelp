@@ -11,6 +11,90 @@
     src: url('../fonts/Poppins-Regular.ttf');
 
 }
+/* This is the header */
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+  background: rgb(194,174,238);
+  background: radial-gradient(circle, rgba(194,174,238,1) 0%, rgba(148,187,233,1) 100%);
+  z-index: 999; /* set z-index to a high value to make sure the header is always on top */
+}
+header h2 {
+    /* TEMP holder until i can figure out how to add the logo or find the right size for the logo */
+    font-family: PopLight;
+    font-size:15px;
+    color:#EDEFFE;
+}
+.logo-top{
+    max-width: 100%;
+    
+}
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px; /* adjust as needed */
+}
+
+
+.urgentbutton{
+    margin-left: auto;
+    margin-right: 10px; /* adjust as needed */
+    padding: 6px 20px; 
+    box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+	background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+	background-color:#fc8d83;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: PopLight;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35; 
+}
+.urgentbutton:hover{
+    background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+	background-color:#e4685d;
+}
+.urgentbutton:active{
+    position:relative;
+    top: 1px;
+}
+.donationbutton{
+    box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius:6px;
+	border:1px solid #c584f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:PopLight;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #9752cc;
+}
+
+.donationbutton:hover{
+    background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+.donationbutton:active{
+    position:relative;
+	top:1px;
+}
 
 /* I need to seperate each card and then find a way for them to be horiziontal from each other and then figure out how to fit the tezt inisidw of the card */
 body{
@@ -41,7 +125,7 @@ body{
     margin-right: 30px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     transform-style: preserve-3d;
-    transition: all 0.5s ease;
+    transition: all 1.5s ease;
 }
 
 .card1:hover, .card2:hover, .card3:hover {
@@ -80,7 +164,23 @@ body{
     align-items: center;
 }
 
-.card-back {
+.card1 .card-back {
+    background: #E8BCD3;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card2 .card-back {
+    background: #A3A5EA;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card3 .card-back {
     background: #FFC0CB;
     transform: rotateY(180deg);
     display: flex;
@@ -110,17 +210,39 @@ body{
 }
 
 .back-content p {
-    font-size: 18px;
-    font-family: PopLight;
+    font-size: 15.5px;
+    font-family: PopRegular;
     color: #fff;
     margin: 0;
     text-align: center;
 }
 
-.back-content a {
+.card1 .back-content a {
     display: inline-block;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 15px;
+    font-family: PopLight;
+    color: #fff;
+    padding: 10px 20px;
+    background: #E25555;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.card2 .back-content a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: PopLight;
+    color: #fff;
+    padding: 10px 20px;
+    background: #B687E6;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.card3 .back-content a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 15px;
     font-family: PopLight;
     color: #fff;
     padding: 10px 20px;
