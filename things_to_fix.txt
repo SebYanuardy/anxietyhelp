@@ -1,3 +1,10 @@
+Things that need to be fixed. 
+
 First find photos for all of the pages 
 Resize the photo in the landing page and make sure that the photo fixs in the hero class 
 then do your research about the diffrent catagories of the pages and then make sure to put them into the pages 
+Landing page ****
+Nav Bar with a better image and is more interactive with the site and maybe has a cooler function *** 
+Find a way to input the Chatbot that you made into the site 
+
+I think this can just be a general Info site ? 
